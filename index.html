@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>4shared</title>
+    <link href="style.css" rel="stylesheet"></link>
+    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
+    <script src='https://bundle.run/prettier-bytes'></script>
+    <script src='https://bundle.run/upload-element'></script>
+    <script src='https://bundle.run/drag-drop'></script>
+    <script src='https://bundle.run/create-torrent'></script>
+  </head>
+  <body>
+    <section>
+      <h1>Instant File Sharing 🌝</h1>
+    </section>
+    <section>
+      <h2>Log</h2>
+      <div id='speed'></div>
+      <div id='log'></div>
+    </section>
+    <section>
+      <h1>Start downloading</h1>
+      <form id='download'>
+        <label for='torrentId'>Download from a shared link:</label>
+        <input name='torrentId' id='torrentId' placeholder='magnet:' required />
+        <button type='submit'>Download</button>
+      </form>
+    </section>
+    <section>
+      <h2>Start sharing</h2>
+      <p>Drag-and-drop files to begin sharing.</p>
+      <form>
+        <label for='upload'>Or choose a file:</label>
+        <input type='file' name='upload' id='upload' multiple />
+      </form>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
